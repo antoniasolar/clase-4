@@ -1,21 +1,21 @@
 const trabajitos = [
     {
-        photo: "https://picsum.photos/id/237/200/300",
+        photo: "https://antoniasolar.github.io/clase-4/img/jardines.webp",
         title: "Jardines",
         description: "Portada de libro Jardines Gabriela Mistral",
     },
       {
-        photo: "https://picsum.photos/seed/picsum/200/300",
+        photo: "https://antoniasolar.github.io/clase-4/img/dvina.webp",
         title: "D'vina",
         description: "Diseño de marca para nuestro vino",
     },
       {
-        photo: "https://picsum.photos/seed/picsum/200/300",
+        photo: "https://antoniasolar.github.io/clase-4/img/lumina.webp",
         title: "Lúmina",
         description: "Diseño de artefacto emocional",
     },
       {
-        photo: "https://picsum.photos/seed/picsum/200/300",
+        photo: "https://antoniasolar.github.io/clase-4/img/represion.webp",
         title: "Represión silenciosa",
         description: "Diseño de afiche y fanzine de problematica social",
     }
@@ -256,16 +256,19 @@ function setup() {
     select("#nombre").html(yo.nombre);
     select("#aprendizaje").html(yo.esperado);
     select("#cuantos").html(otrxs.length);
-    //Lo que sigue es JavaScript a secas
+
     otrxs.forEach((x)=>{
         document.querySelector("#otredad").innerHTML += `<div><a href="${x.cuenta}"><img src="${x.foto}" title="${x.esperado}"></a></div>`;
     });
-    //Copy-paste, y arreglín
+    
     trabajitos.forEach((x)=>{
         document.querySelector("#portafolio").innerHTML += `<div><img src="${x.photo}"><p>${x.title}</p></div>`;
+        
     });
+    
+    document.querySelector("#autoria").innerHTML=yo.nombre;
 
-    //Ahora vuelvo al p5.js
+  
     noStroke();
 }
 
@@ -279,13 +282,13 @@ function draw() {
 
     // Add shapes.
     push();
-    fill("red");
+    fill("pink");
     translate(0, -valor / 4, -valor / 7);
     sphere(valor / 4);
     pop();
     push();
-    fill("blue");
-    sphere(valor / 5);
+    fill("purple");
+    cone(valor / 3);
     pop();
 }
 
