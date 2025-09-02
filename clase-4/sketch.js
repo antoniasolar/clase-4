@@ -1,26 +1,3 @@
-const trabajitos = [
-    {
-        photo: "https://antoniasolar.github.io/clase-4/img/jardines.webp",
-        title: "Jardines",
-        description: "Portada de libro Jardines Gabriela Mistral",
-    },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/dvina.webp",
-        title: "D'vina",
-        description: "Diseño de marca para nuestro vino",
-    },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/lumina.webp",
-        title: "Lúmina",
-        description: "Diseño de artefacto emocional",
-    },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/represion.webp",
-        title: "Represión silenciosa",
-        description: "Diseño de afiche y fanzine de problematica social",
-    }
-    ];
-
 const datos = [
     {
         id: 1,
@@ -227,6 +204,28 @@ const datos = [
     },
 ];
 
+const trabajitos = [
+    {
+        photo: "https://antoniasolar.github.io/clase-4/img/imagen 1.webp",
+        title: "Portada Jardines Gabriela Mistral",
+        description: "Diseño, estética y sociedada</br>Docente Iván Méndez",
+    },
+      {
+        photo: "https://antoniasolar.github.io/clase-4/img/imagen 2.webp",
+        title: "Diseño de D'vina",
+        description: "Proceso y prototipos I</br>Docente Pamela Fuentes",
+    },
+      {
+        photo: "https://antoniasolar.github.io/clase-4/img/imagen 3.webp",
+        title: "Artefacto emocional Lúmina",
+        description: "Proyecto III</br>Docente Pamela Petruska",
+    },
+      {
+        photo: "https://antoniasolar.github.io/clase-4/img/imagen 4.webp",
+        title: "Afiche Represión silenciosa",
+        description: "Proyecto III</br>Docente Pamela Petruska",
+    }
+    ];
 
 var yo;
 var otrxs = [];
