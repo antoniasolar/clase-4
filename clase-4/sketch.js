@@ -204,28 +204,30 @@ const datos = [
     },
 ];
 
-const trabajitos = [
+const trabajos = [
     {
-        photo: "https://antoniasolar.github.io/clase-4/img/imagen 1.webp",
+        photo: "https://antoniasolar.github.io/clase-4/img/Jardines.webp",
         title: "Portada Jardines Gabriela Mistral",
         description: "Diseño, estética y sociedada</br>Docente Iván Méndez",
     },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/imagen 2.webp",
+    {
+        photo: "https://antoniasolar.github.io/clase-4/img/Dvina.webp",
         title: "Diseño de D'vina",
         description: "Proceso y prototipos I</br>Docente Pamela Fuentes",
     },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/imagen 3.webp",
+    {
+        photo: "https://antoniasolar.github.io/clase-4/img/Lumina.webp",
         title: "Artefacto emocional Lúmina",
         description: "Proyecto III</br>Docente Pamela Petruska",
     },
-      {
-        photo: "https://antoniasolar.github.io/clase-4/img/imagen 4.webp",
+    {
+        photo: "https://antoniasolar.github.io/clase-4/img/Represion.webp",
         title: "Afiche Represión silenciosa",
         description: "Proyecto III</br>Docente Pamela Petruska",
-    }
-    ];
+    },
+];
+
+
 
 var yo;
 var otrxs = [];
@@ -260,8 +262,8 @@ function setup() {
         document.querySelector("#otredad").innerHTML += `<div><a href="${x.cuenta}"><img src="${x.foto}" title="${x.esperado}"></a></div>`;
     });
     
-    trabajitos.forEach((x)=>{
-        document.querySelector("#portafolio").innerHTML += `<div><img src="${x.photo}"><p>${x.title}</p></div>`;
+    trabajos.forEach((x)=>{
+        document.querySelector("#portafolio").innerHTML += `<div><img src="${x.photo}"><h3>${x.title}</h3><p>${x.description}</p> </div>`;
         
     });
     
@@ -273,22 +275,107 @@ function setup() {
 
 function draw() {
     background("white");
+    pointLight(255, 255, 255, valor / 1, valor / 1, 20);
     orbitControl();
-    pointLight(255, 255, 255, valor / 3, valor / 2, 50);
     specularMaterial(255);
-    shininess(50);
+    shininess(30);
     metalness(1);
-
-    // Add shapes.
+    ambientLight(95);
+    
+    
+push();
+    fill("black");
+    translate(valor / 9, -valor / 30, valor / 5);    //lentes
+    torus(valor / 14, valor / 80);
+    pop();
+    
     push();
-    fill("pink");
-    translate(0, -valor / 4, -valor / 7);
+    fill("black");
+    translate(-valor / 9, -valor / 30, valor / 5);   //lentes
+    torus(valor / 14, valor / 80);
+    pop();
+    
+    push();
+    fill("rgb(255,255,255)");
+    translate(valor / 9, -valor / 30, valor / 5);    //hojos
+    rotate(95.8,[30,0,0]);
+    cylinder(valor / 16, valor / 90);
+    pop();
+    
+    push();
+    fill("rgb(0,0,0)");
+    translate(valor / 9, -valor / 30, valor / 5);  //pupilas
+    rotate(96.5,[4,0,0]);
+    torus(valor / 40, valor / 100);
+    pop();
+     
+    push();
+    fill("rgb(255,255,255)");
+    translate(-valor / 9, -valor / 30, valor / 5);   //hojos
+    rotate(95.8,[30,0,0]);
+    cylinder(valor / 16, valor / 90);
+    pop();
+    
+    push();
+    fill("rgb(0,0,0)");
+    translate(-valor / 9, -valor / 30, valor / 5);  //pupilas
+    rotate(96.5,[4,0,0]);
+    torus(valor / 40, valor / 100);
+    pop();
+    
+    push();
+    fill("rgb(255, 217, 169)");
+    translate(0, -40 / 4, -100 / 7);                //cara
     sphere(valor / 4);
     pop();
+    
     push();
-    fill("purple");
-    cone(valor / 3);
+    fill("rgb(255, 206, 103)");
+    translate(0, -40 / 4, -100 / 7);                //sombrero
+    cone(valor / 3.5);
     pop();
+    
+    push();
+    fill("rgb(255, 206, 103)");
+    translate(0, -40 / 4, -100 / 7);
+    translate(0, -(valor / 15 + valor / 9), 0);     //sombrero
+    cylinder(valor / 5, valor / 4.5);
+    pop();
+    
+    push();
+    fill("blue");
+    translate(0, -40 / 4, -100 / 7);
+    translate(0, -(valor / 10 + valor / 9), 0);
+    cylinder(valor / 4.5, valor / 35);
+    pop();
+    
+    push();
+    fill("white");
+    translate(0, -40 / 4, -100 / 7);
+    translate(0, -(valor / 14 + valor / 9), 0);
+    cylinder(valor / 4.5, valor / 35);
+    pop();
+    
+    push();
+    fill("red");
+    translate(0, -40 / 4, -100 / 7);
+    translate(0, -(valor / 23 + valor / 9), 0);
+    cylinder(valor / 4.5, valor / 35);
+    pop();
+    
+    push();
+    fill("rgb(206, 112, 109)");
+    translate(-valor / 6, valor / 75, valor / 8);  //mejillas
+    sphere(valor / 19);
+    pop();
+    
+    push();
+    fill("rgb(206, 112, 109)");
+    translate(valor / 6, valor / 75, valor / 8);   //mejillas
+    sphere(valor / 19);
+    pop();
+    
+    
 }
 
 function windowResized() {

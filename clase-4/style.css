@@ -6,7 +6,7 @@ body {
 
 body {
     font-family: "Nunito", monospace;
-    color: deeppink;
+    color: #7cd3ff;
     background: pink;
     text-align: center;
 }
@@ -82,16 +82,19 @@ div#otredad div img:hover {
     filter: grayscale(0);
 }
 div#portafolio div {
-padding:
-0.5rem;
-width: calc(50% - 1rem);
-float:left;
+    padding: 0.5rem;
+    width: calc(50% - 1rem);
+    float: left;
 }
-div#portafolio div img{
+
+div#portafolio div img {
     width: 100%;
 }
-div#final{
-    clear:both;
+
+/* agregar la última cosita */
+
+div#final {
+    clear: both;
     text-align: center;
-    padding:1rem;
+    padding: 1rem;
 }
